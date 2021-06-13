@@ -1,5 +1,5 @@
 # ShareExperienceApp
 
-Emin Şimşek - Emre Aktaş
+Emin Şimşek - Emre Aktaş @emre545545
 
 Android Course Project
