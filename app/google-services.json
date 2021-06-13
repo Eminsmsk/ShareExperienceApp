@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "88633778141",
+    "project_id": "shareexperienceapp",
+    "storage_bucket": "shareexperienceapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88633778141:android:5c6a9410d5b9655befe034",
+        "android_client_info": {
+          "package_name": "com.emins_emrea.shareexperience"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88633778141-q3v6s9ilseokfiak7jnafg157dto86a6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPKX84lhCelaXUMtw4fpKItNW00NqyLfE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88633778141-q3v6s9ilseokfiak7jnafg157dto86a6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
