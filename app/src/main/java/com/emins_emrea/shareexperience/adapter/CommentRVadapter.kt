@@ -1,20 +1,16 @@
-package com.emins_emrea.shareexperience.view
+package com.emins_emrea.shareexperience.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.emins_emrea.shareexperience.R
 import com.emins_emrea.shareexperience.model.Comment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.experience_card.view.*
 
 class CommentRVadapter(
     private val myContext: Context?,

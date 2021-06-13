@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.bumptech.glide.Glide
 import com.emins_emrea.shareexperience.R
+import com.emins_emrea.shareexperience.adapter.CommentRVadapter
 import com.emins_emrea.shareexperience.model.Comment
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth

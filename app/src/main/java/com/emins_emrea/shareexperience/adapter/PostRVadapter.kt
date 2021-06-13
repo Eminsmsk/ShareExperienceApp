@@ -1,4 +1,4 @@
-package com.emins_emrea.shareexperience.view
+package com.emins_emrea.shareexperience.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.emins_emrea.shareexperience.R
+import com.emins_emrea.shareexperience.view.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
@@ -82,8 +83,14 @@ class PostRVadapter(
         else
             holder.textViewExperienceDetails?.text = postList.get(position).experienceDetail
         holder.textViewUsername?.text = postList.get(position).userEmail
+
+
         Glide.with(myContext!!).load(postList.get(position).imageUrl)
             .into(holder.imageViewExperience!!)
+        if(postList.get(position).likes.contains(auth.currentUser!!.email))
+            holder.buttonLike!!.setBackgroundResource(R.drawable.ic_baseline_favorite_24)
+        else
+            holder.buttonLike!!.setBackgroundResource(R.drawable.ic_baseline_favorite_border_24)
 
         holder.card_experience?.setOnClickListener {
             val intent: Intent = Intent(myContext, PostDetailsActivity::class.java)
@@ -200,17 +207,10 @@ class PostRVadapter(
                         )
                     )
                 }
-                /*  postList.sortWith { p1, p2 ->
-                      when {
-                          p1.likes.size > p2.likes.size -> 1
-                          p1.likes.size == p2.likes.size -> 0
-                          else -> -1
-                      }
-                  }*/
                 notifyDataSetChanged()
             }
         } else if (fragment is MainPageFragment) {
-            var postRef = db.collection("ExperiencePost")
+            var postRef = db.collection("ExperiencePost").orderBy("date", Query.Direction.DESCENDING)
             postRef.get().addOnSuccessListener { value ->
                 for (v in value) {
                     postList.add(

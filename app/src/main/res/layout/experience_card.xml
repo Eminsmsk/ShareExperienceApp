@@ -27,15 +27,17 @@
 
             <TextView
                 android:id="@+id/textViewExperienceTitle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:fontFamily="sans-serif"
                 android:text="Experience Title"
                 android:textColor="@color/white"
                 android:textSize="28sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -84,13 +86,14 @@
                 android:layout_width="0dp"
                 android:layout_height="144dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toTopOf="@+id/textViewUsername"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textViewCategories"
-                app:layout_constraintTop_toTopOf="@+id/textViewExperienceTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textViewExperienceTitle"
                 app:srcCompat="@drawable/ic_launcher_background" />
 
             <Button
@@ -98,7 +101,7 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:background="@drawable/ic_baseline_stars_24"
+                android:background="@drawable/ic_baseline_favorite_border_24"
                 android:backgroundTint="#FFCA28"
                 android:fontFamily="@font/doppio_one"
                 android:text="5"
